@@ -5,6 +5,8 @@ namespace temp
 {
     class Program
     {
+        private const bool V = true;
+
         static void Main(string[] args)
         {                        
             int var1 = 2;
@@ -37,12 +39,13 @@ namespace temp
             }
 
             String str = "123456";
-            char pad = '0';
+            Boolean esPad = V;
+            char pad = esPad ? '0' : '1';
+            
             System.Console.WriteLine(str.PadRight(10, pad));
             System.Console.WriteLine(str.Length);
 
-            Object obj = new Hijas.Coche(4.55);
-
+            Object obj = new Hijas.Coche(4.55);            
 
         }
     }
@@ -58,7 +61,7 @@ namespace temp
             }
         }
 
-        public class Coche : Circulo
+        public class Coche : Circulo 
         {
             private int ruedas;
             private double largo;
