@@ -3,18 +3,30 @@ using System.Collections.Generic;
 
 namespace temp
 {
+    enum estaciones {primavera=3, verano=5, otoño=7, invierno=9};
     class Program
-    {
+    {        
         private const bool V = true;
 
         static void Main(string[] args)
-        {                        
+        {       
+            estaciones alrgia = estaciones.primavera;
+
+            System.Console.WriteLine(alrgia );
+
             int var1 = 2;
             int var2 = 4;
             int[] valores = new int[4] { 5, 4, 9, 6 };
             int[] val2 = { 4, 5, 6 };
             Hijas.Circulo miCirculo = new Hijas.Circulo();
             Hijas.Coche Coche01 = new Hijas.Coche(17.00);
+            Punto p = new Punto(3,4);
+
+            p.esOlimpico(); 
+            Punto.memorizar();            
+
+
+            System.Console.WriteLine(string.Format("hola {0} y adios {1}",var1, var2));
 
 
             Hijas.Circulo[] Acirc = new Hijas.Circulo[3];
@@ -45,8 +57,8 @@ namespace temp
             System.Console.WriteLine(str.PadRight(10, pad));
             System.Console.WriteLine(str.Length);
 
-            Object obj = new Hijas.Coche(4.55);            
-
+            Object obj = new Hijas.Coche(4.55);          
+            
         }
     }
 
